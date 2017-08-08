@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>footer</title>
+    <style>
+    html,body{
+        height:100%;
+    }
+    body{
+        margin:0;
+        text-align:center;
+    }
+    header{
+        border:1px solid silver;
+        height:60px;
+        background:pink;
+    }
+    main{
+        border:1px solid silver;
+        background:yellow;
+        /* 将footer固定在页面底部 */
+        /* calc函数内做运算，加号或减号前后要空格 */
+        min-height:calc(100% - 110px);
+        /*当一个元素的height设为100%时，它的父容器也要设置高度，110px代表首尾高度之和*/
+    }
+    footer{
+        border:1px solid silver;
+        height:50px;
+        background:green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>see you again</h1>
+    </header>
+
+    <main>
+        <h3>It's been a long day without you,my friend!</h3>
+        <h3>And I'll tell you all about it when I see you again</h3>
+    </main>
+
+    <footer>
+        <p>&copy 2017 by Iris</p>
+    </footer>
+</body>
+</html>
