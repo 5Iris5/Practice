@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>浮动元素对其他元素的影响</title>
+  <style>
+.box{
+  width: 280px;
+  height: 320px;
+  border: 1px solid;
+  margin: 10px;
+}
+.other{
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.other2{
+  width: 80px;
+  height: 100px;
+  float: left;
+}
+.other3{
+  width: 60px;
+  height: 100px;
+  float: left;
+}
+.father{
+  width: 280px;
+  height: 120px;
+  border: 1px solid;
+  margin: 10px;
+}
+.child{
+  width: 60px;
+  height: 110px;
+  float: left;
+}
+.box5{
+    width:190px;
+    height:210px;
+    background:blue;
+}
+.text{
+  width: 80px;
+  height: 100px;
+  float: left;
+}
+.box1{
+  background:pink;
+}
+.box2{
+  background:blue;
+}
+.box3{
+  background:yellow;
+}
+.txt{
+    background:silver;
+}
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="other2 box1">1</div>
+  <div class="other2 box2">2</div>
+  <div class="other2 box3">3</div>
+</div>
+<div class="box">
+  <div class="other box1">1</div>
+  <div class="other box2">2</div>
+  <div class="other box3">3</div>
+</div>
+<div class="box">
+  <div class="other3 box1">1</div>
+  <div class="other3 box5">其他浮动元素会"察觉"到浮动元素的存在按照从左到右的"正常文档流"排列。如果父元素太窄无法容纳水平排列的所有浮动元素，那么其它浮动元素会向下移动；若浮动元素的高度不同，那么向下移动的时候可能会被旁边浮动的元素卡住。</div>
+  <div class="other3 box3">3</div>
+</div>
+<div class="box">
+  <div class="text box1">1</div>
+  <p class="txt">
+普通元素：普通元素会与浮动元素不重叠，占据浮动元素原有的位置，但会被浮动元素遮罩。
+文字：文字会感知到浮动元素的存在使得文字会围绕浮动元素形成环绕效果。</p>
+</div>
+<div class="father">
+    <div class="child box5">当浮动框高度超出包含框的时候，也就会出现包含框不会自动伸高来闭合浮动元素（“高度塌陷”现象）<br><br>父容器：非BFC的正常文档流父元素会"感受"不到浮动元素的存在，从而产生"高度塌陷"。</div>
+    <div class="child box1">box1</div>
+    <div class="child box3">box3</div>
+    <div class="child box1">box1</div>
+</div>
+</body>
+</html>
