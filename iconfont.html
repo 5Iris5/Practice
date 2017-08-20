@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>iconfont如何修改原有样式</title>
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_390799_xpri7881h4qgp66r.css">
+    <style>
+        .icon{
+            list-style: none;
+            margin:0px;
+            padding:0px;
+            border:1px solid;
+            display:flex;/*浮动*/
+            /*li元素居中显示，一般与flex合用*/
+            justify-content: center;
+        }
+        .icon li{
+            border:1px solid pink;
+            padding:0px 10px;
+        }
+        .icon li a{
+            display:inline-block;
+            text-decoration:none;
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background:black;
+            /*a里面的元素水平垂直居中*/
+            text-align:center;
+            line-height:50px;
+        }
+        .icon li a i{
+            color:white;
+            font-size:26px;/*改变字体图标原有样式*/
+        }
+        .icon li a:hover{
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul class="icon">
+        <li>
+            <a href="">
+                <i class="iconfont icon-tuite"></i>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="iconfont icon-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="iconfont icon-in"></i>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="iconfont icon-weibo"></i>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
