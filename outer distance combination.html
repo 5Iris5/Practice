@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>外边距合并</title>
+    <style>
+    body{
+        /* body在浏览器中margin的默认值为8px */
+        margin:0px;
+    }
+        header, footer{
+            height:30px;
+            background:blue;
+        }
+        main{
+            /* <main>与<h1>父子关系合并，解决办法如下：给父容器加线 */
+            border:1px solid black;
+            background:red;
+        }
+        h1{
+
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>jirengu</h1>
+    </main>
+    <footer></footer>
+</body>
+</html>
