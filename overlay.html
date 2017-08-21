@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>遮罩层</title>
+    <style>
+        dl,dt,dd,a,img{
+            padding:0;
+            margin:0;
+        }
+        dl{
+            position:relative;
+            width:180px;
+            height:240px;
+            background:#eee;
+            text-align:center;
+            color:#aed3db;
+        }
+        img{
+            width:180px;
+            height:160px;
+        }
+        dd:nth-of-type(1){
+            margin-top:10px;
+            font-weight:bold;
+        }
+        /*制作遮罩层*/
+        dl dt a:hover::before{
+            content:'+';
+            display: block;
+            font-size:86px;
+            color:#fff;
+            position:absolute;/*这里若是使用fixed,fixed是以视窗为参考的，后面的值都为0,遮罩效果是全屏。绝对定位的东西因为位置是绝对的所以要找一个参照物，于是需要找一个相对定位或者绝对定位的元素作为参照物，如果父元素是相对定位或者绝对定位，就参考父元素的位置，如果父元素不是，祖父元素是，就参考祖父元素，以此类推。
+            问：那可以子父元素都用绝对定位或者都用相对定位吗?因为我看到的一般是子元素用的绝对定位，父元素就是相对定位。
+            答：你看到的子元素绝对定位，父元素想对定位，是因为这个相对定位设置出来基本都是为了给子元素做参照物的。*/
+            /*top:0;
+            right:0;
+            left:0;
+            bottom:0;(width:100%;height:100%也可以，但是这两种情况，定位后出来的效果是整块区域)*/
+            background:rgba(153,50,240,0.3);
+            z-index: 1;
+            /*如何让遮罩只是盖住图片？设置宽高*/
+            width:180px;
+            height:160px;
+            line-height:160px;/*+居中*/
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>
+           <a href="###">
+               <img src="img/02.jpg" alt="">
+           </a>
+        </dt>
+        <dd>迪丽热巴</dd>
+        <dd>代表作：《克拉恋人》</dd>
+    </dl>
+</body>
+</html>
+
+
+
+
+
