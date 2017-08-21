@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>如何处理边框中溢出的文字</title>
+    <style type="text/css">
+      .box{
+        width:120px;
+        height:150px;
+        border:1px solid grey;
+      }
+      .box1{
+        overflow:auto;
+        /*如果溢出则出现滚动条*/
+      }
+      .box2{
+        overflow:hidden;
+        /*溢出文字隐藏不出现滚动条*/
+        /*visible功能相反*/
+        white-space:nowrap;/*文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止*/
+        text-overflow:ellipsis;/*隐藏的文字变为...显示*/
+      }
+      .box3{
+        overflow:scroll;
+        /*不管是否溢出都自动出现滚动条*/
+        /*overflow-x: 横向溢出;overflow-y: 纵向溢出*/
+      }
+      .box5{
+        overflow:visible;
+        margin-top:20px;
+      }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+       她其实也喜欢热闹的景象。她喜欢在热闹的场景里做一抹小小的背景颜色，而不是无情的被挑剔，所有人都忘了她、无视她。
+    </div><br>
+    <div class="box box2">
+        你们成日说诸师兄的大女儿玲珑是个百年难得一遇的天才，依我看啊，倒也未必！可有谁见过那小女儿璇玑？不说别的，但那一身遇变不惊、目下无尘的味道就是的办大事的料！
+    </div><br>
+    <div class="box box3">
+        <img src="http://www.w3school.com.cn/i/redstar.gif" alt="">
+    </div>
+    <div class="box box5">
+        世间万事并无绝对的青红皂白。你性情直率，将来难免遭遇挫折，还望你将来不要实施追究对错。须知千万人便有千万个对错。
+    </div><br>
+</body>
+</html>
