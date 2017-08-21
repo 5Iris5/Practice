@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>模拟导航界面</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color:#aed4dc;
+            /*background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;*/
+        }
+        .box{
+            width:1000px;
+            height:400px;
+            margin:100px auto;
+            border:1px solid red;
+            border-style:none;
+        }
+        .box>ul>li{
+            position:relative;
+            list-style: none;
+            width: 180px;
+            height:105px;
+            background:rgba(255,255,255,0.1);
+            margin:30px 5px;
+            float:left;
+        }
+        .box>ul>li>div{
+            position:absolute;
+            width: 180px;
+            height:105px;
+            background:rgba(255,255,255,0.1);
+        }
+        .box>ul>li>div:nth-child(1){
+            transform:rotate(60deg);
+        }
+        .box>ul>li>div:nth-child(2){
+            transform:rotate(-60deg);
+        }
+        .box>ul>li:nth-child(9n+6){
+            margin-left:100px;
+        }
+        .box>ul>li>img{
+            position:absolute;
+            left:0px;
+            right:0px;
+            top:0px;
+            bottom:0px;
+            /*全设置为0居中显示*/
+            margin:auto;
+            border-radius:40px;
+            transition:transform 0.2s linear;
+            /*动画效果：旋转 速度 匀速*/
+        }
+        .box>ul>li>img:hover{
+            transform:rotate(360deg) /*旋转角度*/
+            scale(1.4);  /*放大倍率*/
+        }
+    </style>
+</head>
+<body>
+   <div class="box">
+       <ul>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/01.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/02.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/04.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/09.png" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/06.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/11.jpeg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/05.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/10.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/08.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/14.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/12.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/07.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/15.jpg" alt="" width="80px" height="80px">
+           </li>
+           <li>
+               <div></div>
+               <div></div>
+               <img src="img/03.jpg" alt="" width="80px" height="80px">
+           </li>
+       </ul>
+   </div>
+</body>
+</html>
