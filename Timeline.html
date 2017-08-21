@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间轴</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .timeline{
+            min-width:860px;
+            margin: 50px 100px;
+        }
+        .timeline h2,p{
+            text-align:center;
+        }
+        ul{
+            list-style:none;
+            margin-top:80px;
+        }
+        ul li{
+            margin-top:50px;
+            position:relative;
+        }
+        ul li img,
+        ul li .img{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            border: 3px solid #e2e5e4;
+            float:right;
+            background: #add3db;
+        }
+        ul li .img i{
+            display:inline-block;
+            font-size:42px;
+            font-weight:bold;
+            padding-top:50px;
+            padding-right:35px;
+        }
+        ul li::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        ul li:nth-child(odd){
+            color:pink;
+            padding-right:calc(50% - 75px);
+            text-align:right;
+        }
+        ul li:nth-child(odd) dl{
+            margin-right:180px;
+        }
+        ul li:nth-child(even){
+            color:green;
+            padding-left:calc(50% - 75px);
+            text-align:left;
+        }
+        ul li:nth-child(even) dl{
+            margin-left:180px;
+        }
+        ul li:nth-child(even) img{
+            float:left;
+        }
+        /*制作串联图片的线*/
+        ul li::before{
+            content:'';
+            display:block;
+            height:55px;
+            width:5px;
+            background-color:#eee;
+            /*将线定位*/
+            position:absolute;
+            left:50%;
+            top:155px;
+        }
+        /*去掉最后一根线(注意格式)*/
+        ul li:last-child::before{
+            height:0px;
+        }
+        /*给图片添加动画效果*/
+        ul li img{
+            transition:transform 0.2s linear;
+            /*动画效果：旋转 速度 匀速*/
+        }
+        ul li img:hover{
+            transform:rotate(360deg) scale(1.2);
+            /*旋转角度   放大倍率*/
+        }
+        /*最后一个的动画效果*/
+        ul li .img{
+            transition:transform 0.2s linear;
+            /*动画效果：旋转 速度 匀速*/
+        }
+        ul li .img:hover{
+            transform:rotate(360deg) scale(0.8);
+            /*旋转角度   放大倍率*/
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <h2>Time-line</h2>
+        <p>Iris &copy 2017/8/21</p>
+        <ul>
+            <li>
+                <img src="img/01.jpg" alt="">
+                <dl>
+                    <dt>2009-2011</dt>
+                    <dd>Our Humble Beginnings</dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+                </dl>
+            </li>
+            <li>
+                <img src="img/03.jpg" alt="">
+                <dl>
+                    <dt>2009-2011</dt>
+                    <dd>Our Humble Beginnings</dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+                </dl>
+            </li>
+            <li>
+                <img src="img/05.jpg" alt="">
+                <dl>
+                    <dt>2009-2011</dt>
+                    <dd>Our Humble Beginnings</dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+                </dl>
+            </li>
+            <li>
+                <img src="img/06.jpg" alt="">
+                <dl>
+                    <dt>2009-2011</dt>
+                    <dd>Our Humble Beginnings</dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+                </dl>
+            </li>
+            <li>
+                <span class="img">
+                    <i>END</i>
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
