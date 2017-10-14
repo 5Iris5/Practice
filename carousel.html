@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>3D轮播之立方体</title>
+    <style>
+        figure{
+            display:inline-block;
+            position:absolute;
+            width:150px;
+            height:150px;
+        }
+        figcaption{
+            display:inline-block;
+            width:150px;
+            height:150px;
+        }
+        .carousel_1{
+            background:green;
+            transform:perspective(800px) rotateZ(0deg) translateZ(75px);
+        }
+        .carousel_2{
+            background:pink;
+            transform:perspective(800px) rotateY(-90deg) translateZ(75px);
+        }
+        .carousel_3{
+            background:red;
+            transform:perspective(800px) rotateZ(0deg) translateZ(-75px);
+        }
+        .carousel_4{
+            background:blue;
+            transform:perspective(800px) rotateY(90deg) translateZ(75px);
+        }
+        .carousel_5{
+            background:silver;
+            transform:perspective(800px) rotateX(90deg) translateZ(75px);
+        }
+        .carousel_6{
+            background:yellow;
+            transform:perspective(800px) rotateX(-90deg) translateZ(75px);
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div id="carousel">
+            <figure>
+                <figcaption class="carousel_1">前</figcaption>
+            </figure>
+            <figure>
+                <figcaption class="carousel_2">左</figcaption>
+            </figure>
+            <figure>
+                <figcaption class="carousel_3">后</figcaption>
+            </figure>
+            <figure>
+                <figcaption class="carousel_4">右</figcaption>
+            </figure>
+            <figure>
+                <figcaption class="carousel_5">上</figcaption>
+            </figure>
+            <figure>
+                <figcaption class="carousel_6">下</figcaption>
+            </figure>
+        </div>
+    </section>
+</body>
+</html>
